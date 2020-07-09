@@ -18,8 +18,41 @@
 
     <?php
 
+        include "config.php";
+        
+        $select_query = "SELECT * FROM registrationtable";
+        $run = mysqli_query($con, $select_query);
+        $noofrecord = mysqli_num_rows($run);
+        if ($noofrecord > 0) { ?>
+            <table>
+                <thead>
+                    <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+        <?php
+            while($record = mysqli_fetch_array($run))
+            {
+                echo "<tr>
+                <td>".$record."['0']</td>
+                <td>".$record."['1']</td>
+                <td>".$record."['2']</td>
+                <td>".$record."['3']</td>
+                <td>".$record."['4']</td>
+                </tr>";
+            }
+            echo "</tbody>";
+        } else {
+            echo "Table has no record"
+        }
         
 
     ?>
+    </table>
 </body>
 </html>

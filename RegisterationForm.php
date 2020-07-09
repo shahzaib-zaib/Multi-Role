@@ -21,8 +21,8 @@
             <option value="customer">Customer</option>
             <option value="seller">Seller</option>
         </select>
-
-        <input type="submit" name="btn" value="Submit" id="">
+        <br>
+        <input type="submit" name="btn" value="Register Yourdelf" id="">
     </form>
 
     <?php
@@ -36,6 +36,8 @@
 
             $insert_query = "INSERT INTO registrationtable(Name, Email, Password, Role)
             VALUES ('$a', '$b', '$c', '$d')";
+            $run = mysqli_query($con, $insert_query);
+            header('location:loginpage.php');
 
         }
 
