@@ -1,3 +1,10 @@
+<?php 
+    session_start(); 
+    
+    if ($_SESSION['userrole'] == null) {
+        header("location:loginpage.php");
+    }
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +36,7 @@
                     <li class='nav-item'>
                         <a class='nav-link disabled' href='#'>Disabled</a>
                     </li>";
-            }elseif($_SESSION['userrole'] == "seller"){
+            }elseif($_SESSION['userrole'] == "admin"){
                 echo "<li class='nav-item'>
                         <a class='nav-link' href='#'>Features</a>
                     </li>
