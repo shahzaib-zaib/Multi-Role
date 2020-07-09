@@ -21,6 +21,8 @@
             <option value="customer">Customer</option>
             <option value="seller">Seller</option>
         </select>
+
+        <input type="submit" name="btn" value="Submit" id="">
     </form>
 
     <?php
