@@ -13,6 +13,13 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Wlcome</h1>
+    <a href="logout.php">Logout</a>
+
+    <?php
+
+        
+
+    ?>
 </body>
 </html>
