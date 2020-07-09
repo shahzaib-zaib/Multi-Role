@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="">
+    <form action="" method="post">
         <p>Enter Your Name</p>
         <input type="text" name="name" id="">
 
