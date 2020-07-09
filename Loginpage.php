@@ -18,6 +18,7 @@
 
         include "config.php";
 
+        session_start();
         if(isset($_POST['btn'])){
             $a = $_POST['name'];
             $b = $_POST['pswd'];
@@ -25,6 +26,22 @@
 
             $run_query = mysqli_query($con, $login_query);
             $verify = mysqli_num_rows($run_query);
+            if ($verify == 1) {
+                $array = mysqli_fetch_assoc($run_query);
+                $_SESSION['name'] = $db['Name'];
+                $_SESSION['userrole'] = $db['Role'];
+
+                if ($_SESSION['userrole'] == "Admin") {
+                    header('location:dashboard.php');
+                } else {
+                    header('location:homepage.php');
+                }
+                
+
+            } else {
+                echo "Invalid Credentials";
+            }
+            
         }
 
     ?>
