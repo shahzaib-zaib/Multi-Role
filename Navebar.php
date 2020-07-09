@@ -28,31 +28,28 @@
 
             if($_SESSION['userrole'] == "seller"){
                echo "<li class='nav-item'>
-                        <a class='nav-link' href='#'>Features</a>
+                        <a class='nav-link' href='#'>Add Product</a>
                     </li>
                     <li class='nav-item'>
-                        <a class='nav-link' href='#'>Pricing</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class='nav-link disabled' href='#'>Disabled</a>
+                        <a class='nav-link' href='#'>View Order</a>
                     </li>";
-            }elseif($_SESSION['userrole'] == "admin"){
+                    
+            }elseif($_SESSION['userrole'] == "customer"){
                 echo "<li class='nav-item'>
-                        <a class='nav-link' href='#'>Features</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class='nav-link' href='#'>Pricing</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class='nav-link disabled' href='#'>Disabled</a>
-                    </li>";
-            }
+                            <a class='nav-link disabled' href='#'>View Product</a>
+                        </li>
+                        <li class='nav-item'>
+                            <a class='nav-link disabled' href='#'>Sale</a>
+                        </li>";
+                        }
         ?>
         <li class='nav-item'>
-            <a class='nav-link' href='#'>Logout.php</a>
+            <a class='nav-link' href='#'>
+                        <?php echo $_SESSION['username'] ?>
+            </a>
         </li>
         <li class='nav-item'>
-            <a class='nav-link' href='#'>Pricing</a>
+            <a class='nav-link' href='logout.php'>Logout</a>
         </li>
         </ul>
     </div>

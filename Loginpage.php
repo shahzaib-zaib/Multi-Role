@@ -32,9 +32,9 @@
                 $_SESSION['userrole'] = $db['Role'];
 
                 if ($_SESSION['userrole'] == "Admin") {
-                    header('location:Dashboard.php');
+                    header('location:dashboard.php');
                 } else {
-                    header('location:Homepage.php');
+                    header('location:homepage.php');
                 }
                 
 
