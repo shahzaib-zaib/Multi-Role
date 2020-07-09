@@ -28,18 +28,18 @@
 
             if($_SESSION['userrole'] == "seller"){
                echo "<li class='nav-item'>
-                        <a class='nav-link' href='#'>Add Product</a>
+                        <a class='nav-link' href='addproduct.php'>Add Product</a>
                     </li>
                     <li class='nav-item'>
-                        <a class='nav-link' href='#'>View Order</a>
+                        <a class='nav-link' href='vieworder.php'>View Order</a>
                     </li>";
                     
             }elseif($_SESSION['userrole'] == "customer"){
                 echo "<li class='nav-item'>
-                            <a class='nav-link disabled' href='#'>View Product</a>
+                            <a class='nav-link disabled' href='viewproduct.php'>View Product</a>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link disabled' href='#'>Sale</a>
+                            <a class='nav-link disabled' href='sale.php'>Sale</a>
                         </li>";
                         }
         ?>

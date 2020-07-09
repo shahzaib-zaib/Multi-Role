@@ -24,7 +24,7 @@
         $run = mysqli_query($con, $select_query);
         $noofrecord = mysqli_num_rows($run);
         if ($noofrecord > 0) { ?>
-            <table>
+            <table id="mytable" class="table table-border">
                 <thead>
                     <tr>
                     <th>Id</th>
@@ -34,7 +34,7 @@
                     <th>Role</th>
                     </tr>
                 </thead>
-                <tbody>
+            <tbody>
         <?php
             while($record = mysqli_fetch_array($run))
             {
@@ -54,5 +54,10 @@
 
     ?>
     </table>
+    <script>
+        $(document).ready( function(){
+        $('#mytable').DataTable();
+    });
+    </script>
 </body>
 </html>
