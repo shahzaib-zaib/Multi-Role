@@ -1,3 +1,10 @@
+<?php
+    if($_SESSION['userrole'] == "customer"){
+        header('location:logout.php');
+    }
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

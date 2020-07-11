@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if($_SESSION['userrole'] == "seller"){
+        header('location:logout.php');
+    }
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
