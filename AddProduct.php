@@ -1,8 +1,8 @@
 <?php
+    session_start();
     if($_SESSION['userrole'] == "customer"){
         header('location:logout.php');
     }
-
 
 ?>
 <!DOCTYPE html>
